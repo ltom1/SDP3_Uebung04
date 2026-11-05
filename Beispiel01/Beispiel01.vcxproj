@@ -102,12 +102,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GraphicObject.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GraphicObject.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="SingletonBase.h" />
   </ItemGroup>
