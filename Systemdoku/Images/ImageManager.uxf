@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>158</x><y>624</y><w>272</w><h>112</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>150</x><y>675</y><w>306</w><h>126</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 GraphicObject
 -
 # mX: size_t
@@ -7,83 +7,80 @@ GraphicObject
 -
 + GraphicObject(x: size_t, y: size_t, color: std::string)
 /+ ToSVG(): std::string = 0/
-/- GetProperties: std::string = 0/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>502</x><y>576</y><w>344</w><h>88</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+/- GetProperties: std::string = 0/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>537</x><y>621</y><w>387</w><h>99</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Rectangle
 -
 # mWidth: size_t
 # mHeight: size_t
 -
 /# Rectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t)/
-+ ToSVG(): std::string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>502</x><y>712</y><w>344</w><h>88</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
++ ToSVG(): std::string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>537</x><y>774</y><w>387</w><h>99</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Circle
 -
 # mRadius: size_t
 -
 # Circle(x: size_t, y: size_t, color: std::string, radius: size_t)
 + ToSVG(): std::string
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>38</x><y>392</y><w>376</w><h>104</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
-Image
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>15</x><y>432</y><w>423</w><h>117</h></coordinates><panel_attributes>Image
 -
 - mName: std::string
 -
 + Image(name: std::string, GraphicObjectFactory)
-+ WriteSVG(): void
 + AddCircle(x: size_t, y: size_t, color: std::string, radius: size_t): void
-+ AddRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>502</x><y>408</y><w>344</w><h>64</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
++ AddRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): void
+
++ WriteSVG(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>465</x><y>432</y><w>468</w><h>72</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 GraphicObjectFactory
 -
 /+ CreateCircle(x: size_t, y: size_t, color: std::string, radius: size_t): Circle = 0/
-/+ CreateRectangle(): Rectangle = 0/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>456</y><w>416</w><h>48</h></coordinates><panel_attributes>FilledObjectFactory
++ CreateRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): Rectangle</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>978</x><y>486</y><w>468</w><h>54</h></coordinates><panel_attributes>FilledObjectFactory
 -
 + CreateCircle(x: size_t, y: size_t, color: std::string, radius: size_t): Circle
-+ CreateRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): Rectangle</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>384</y><w>416</w><h>48</h></coordinates><panel_attributes>FramedObjectFactory
++ CreateRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): Rectangle</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>978</x><y>405</y><w>468</w><h>54</h></coordinates><panel_attributes>FramedObjectFactory
 -
 + CreateCircle(x: size_t, y: size_t, color: std::string, radius: size_t): Circle
-+ CreateRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): Rectangle</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>142</x><y>304</y><w>144</w><h>40</h></coordinates><panel_attributes>FilledImage
++ CreateRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): Rectangle</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>339</x><y>252</y><w>432</w><h>99</h></coordinates><panel_attributes>ImageManager
 -
-+ FilledImage(name: std::string)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>318</x><y>304</y><w>152</w><h>40</h></coordinates><panel_attributes>FramedImage
--
-+ FramedImage(name: std::string)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>248</y><w>144</w><h>64</h></coordinates><panel_attributes>ImageManager
--
-+ AddImage(Image: image)
-+ WriteAllSVG(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>624</y><w>368</w><h>48</h></coordinates><panel_attributes>FramedRectangle
++ AddImage(name: std::string, GraphicObjectFactory)
++ AddCircle(x: size_t, y: size_t, color: std::string, radius: size_t): void
++ AddRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t): void
+
++ WriteAllSVG(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>978</x><y>675</y><w>414</w><h>54</h></coordinates><panel_attributes>FramedRectangle
 -
 + FramedRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t)
-- GetProperties: std::string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>560</y><w>368</w><h>48</h></coordinates><panel_attributes>FilledRectangle
+- GetProperties: std::string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>978</x><y>603</y><w>414</w><h>54</h></coordinates><panel_attributes>FilledRectangle
 -
 + FilledRectangle(x: size_t, y: size_t, color: std::string, width: size_t, height: size_t)
-- GetProperties: std::string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>696</y><w>368</w><h>48</h></coordinates><panel_attributes>FilledCircle
+- GetProperties: std::string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>978</x><y>756</y><w>414</w><h>54</h></coordinates><panel_attributes>FilledCircle
 -
 + FilledCircle(x: size_t, y: size_t, color: std::string, radius: size_t)
 - GetProperties: std::string
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>760</y><w>368</w><h>48</h></coordinates><panel_attributes>FramedCircle
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>978</x><y>828</y><w>414</w><h>54</h></coordinates><panel_attributes>FramedCircle
 -
 + FramedCircle(x: size_t, y: size_t, color: std::string, radius: size_t)
 - GetProperties: std::string
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>822</x><y>120</y><w>120</w><h>80</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>897</x><y>108</y><w>135</w><h>90</h></coordinates><panel_attributes>
 
-Object</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>582</x><y>112</y><w>160</w><h>88</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Object</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>699</x><y>108</y><w>117</w><h>90</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 &lt;&lt;template T&gt;&gt;
 SingletonBase
 -
-_- mInstance: T_
--
 _+ GetInstance(): T_
-/# SingletonBase()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>838</x><y>576</y><w>72</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;40;50;40;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>862</x><y>608</y><w>48</w><h>56</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>40;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>838</x><y>712</y><w>72</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;40;50;40;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>862</x><y>744</y><w>48</w><h>56</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>40;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>422</x><y>608</y><w>96</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;40;100;40;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>446</x><y>680</y><w>72</w><h>88</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>70;90;10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>838</x><y>400</y><w>72</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;50;50;50;50;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>432</y><w>40</w><h>64</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>30;60;10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>286</x><y>488</y><w>64</w><h>152</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+/# SingletonBase()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>915</x><y>621</y><w>81</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;40;50;40;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>942</x><y>657</y><w>54</w><h>63</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>40;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>915</x><y>774</y><w>81</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;40;50;40;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>942</x><y>810</y><w>54</w><h>63</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>40;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>447</x><y>657</y><w>108</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;40;100;40;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>474</x><y>738</y><w>81</w><h>99</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>70;90;10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>924</x><y>423</y><w>72</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;50;40;50;40;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>951</x><y>459</y><w>45</w><h>72</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>30;60;10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>294</x><y>540</y><w>72</w><h>153</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 -mObjects
 m1=1
-m2=*</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>406</x><y>424</y><w>112</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=*</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>429</x><y>495</y><w>171</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
      -mObjectFactory
 m1=1
-m2=1</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>294</x><y>256</y><w>232</w><h>152</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;40;160;40;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>342</y><w>72</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 -mImages
 m1=1
-m2=*</panel_attributes><additional_attributes>270;20;10;20;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>206</x><y>336</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>382</x><y>336</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>734</x><y>152</y><w>104</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>192</y><w>528</w><h>448</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>640;10;640;420;10;420;10;540</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>488</y><w>24</w><h>56</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>694</x><y>192</y><w>648</w><h>304</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110;790;110;790;360;770;360</additional_attributes></element><element><id>Relation</id><coordinates><x>646</x><y>272</y><w>72</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1302</x><y>400</y><w>40</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>312</y><w>856</w><h>88</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>1050;90;1050;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>246</x><y>336</y><w>1112</w><h>136</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>1320;150;1320;140;1370;140;1370;30;10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1254</x><y>408</y><w>176</w><h>256</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;create&gt;&gt;</panel_attributes><additional_attributes>10;300;150;300;150;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1254</x><y>384</y><w>192</w><h>416</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;create&gt;&gt;</panel_attributes><additional_attributes>10;500;170;500;170;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1254</x><y>456</y><w>160</w><h>280</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;create&gt;&gt;</panel_attributes><additional_attributes>10;330;130;330;130;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1254</x><y>480</y><w>144</w><h>120</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;create&gt;&gt;</panel_attributes><additional_attributes>10;130;110;130;110;10;70;10</additional_attributes></element></diagram>
+m2=*</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>807</x><y>144</y><w>108</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>189</y><w>594</w><h>504</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>640;10;640;450;10;450;10;540</additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>540</y><w>27</w><h>72</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>189</y><w>702</w><h>342</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110;760;110;760;360;740;360</additional_attributes></element><element><id>Relation</id><coordinates><x>762</x><y>279</y><w>45</w><h>27</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1437</x><y>423</y><w>45</w><h>27</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1383</x><y>432</y><w>198</w><h>288</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;300;150;300;150;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1383</x><y>405</y><w>216</w><h>468</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;500;170;500;170;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1383</x><y>486</y><w>180</w><h>315</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;330;130;330;130;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1383</x><y>513</y><w>162</w><h>135</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;130;110;130;110;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>789</x><y>72</y><w>144</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+_- mInstance: T_</panel_attributes><additional_attributes>30;60;60;60;60;10;10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>342</y><w>54</w><h>108</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>

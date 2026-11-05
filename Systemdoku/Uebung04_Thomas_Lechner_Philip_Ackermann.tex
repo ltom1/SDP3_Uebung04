@@ -94,6 +94,25 @@ Allerdings sollte ein \textit{Bild} nur \textit{Graphic Objects} von \textbf{ein
 
 \subsection{Designentscheidungen}
 
+\textbf{Object} wird wieder als Basisklasse aller Basisklassen verwendet, damit der virtuelle Destruktor überall vorhanden ist.\\
+
+Die \textbf{ImageManager} Klasse ist die Hauptklasse der Anwendung, die dann vom Client verwendet wird. Man kann ein neues \textbf{Image} mit einer gewissen \textbf{GraphicObjectFactory} anlegen und dann immer auf dem neu angelegten \textbf{Image} neue \textbf{Circle}s und \textbf{Rectangle}s hinzufügen, bis ein neues \textbf{Image} hinzugefügt wird.\\
+
+\textbf{Circle} und \textbf{Rectangle} erben von der abstrakten \textbf{GraphicObject} Klasse und sind aber auch selbst abstrakt, da sie noch jeweils von \textbf{FilledCircle}/\textbf{FramedCircle} bzw. \textbf{FilledRectangle}/\textbf{FramedRectangle} abgeleitet werden.\\
+
+\textbf{GraphicObject} hat als Member nur die Position (X,Y) und die Farbe, \textbf{Circle} zusätzlich noch einen Radius und \textbf{Rectangle} zusätzlich Höhe und Breite.\\
+
+Die Grafikobjekte werden immer von einer \textbf{GraphicObjectFactory} (abgeleitete Klassen \textbf{FilledObjectFactory} und \textbf{FramedObjectFactory}) konstruiert. \textbf{FilledObjectFactory} konstruiert immer die \textbf{Filled}-Varianten und \textbf{FramedObjectFactory} die \textbf{Framed}-Varianten.\\
+
+Beim Konstruieren eines \textbf{Images} wird eine solche Fabrik mitgegeben. Mit dieser werden in \textit{AddCircle} und \textit{AddRectangle} neue Grafikobjekte erstellt, die intern in einer Liste gespeichert werden $\rightarrow$ \textbf{Abstract Factory Pattern}.
+
+Die Fabriken und \textbf{ImageManager} sollen nur ein Mal gleichzeitig existieren können, dafür wird das \textbf{Singleton Pattern} verwendet. Genauer gesagt wird von der abstrakten \textbf{SingletonBase} Template-Klasse geerbt. Diese erbt von \textbf{Object}, da sie auch einen virtuellen Destruktor benötigt.\\
+
+Zur Umwandlung der Grafikobjekt-Daten ins SVG-Format, wird die \textit{ToSVG} Methode eines \textbf{GraphicObject}s verwendet, die pure virtual ist und von \textbf{Circle} und \textbf{Rectangle} implementiert wird. Dabei werden die Daten als XML-SVG-String zurückgegeben. Da die Kindklassen von \textbf{Rectangle} und \textbf{Circle} eventuell zusätzliche Eigenschaften zum XML hinzufügen müssen (z.B. fill=''none''), gibt es noch eine weitere pure virtual Methode \textit{GetProperties}. Diese wird in den untersten Klassen implementiert und von den abstrakten \textbf{Circle} und \textbf{Rectangle} in deren \textit{ToSVG} Methode aufgerufen. Dadurch kann die Erstellung des XMLs zusätzlich angepasst werden $\rightarrow$ \textbf{Template Method Pattern}.\\
+
+In \textit{WriteSVG} generiert \textbf{Image} so die XML-SVG-Strings für jedes gespeicherte \textbf{GraphicObject} und schreibt diese Strings zusätzlich mit einem XML-Header und XML-Footer in eine Datei. Der Name der Datei entspricht dem Namen des \textbf{Image}s (Member \textit{mName}) mit .svg Endung.
+\textbf{ImageManager} ruft in \textit{WriteAllSVG} für jedes gespeicherte \textbf{Image} die \textit{WriteSVG} Methode auf.\\
+
 \section{Dokumentation der Komponenten (Klassen)}
 
 Die HTML-Startdatei befindet sich im Verzeichnis \href{run:./../doxy/html/index.html}{./../doxy/html/index.html}
