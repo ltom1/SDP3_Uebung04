@@ -28,20 +28,20 @@ public:
 	/// @returns The SVG-XML-Element as a string.
 	virtual std::string ToSVG() const = 0;
 
+protected:
 	/// @brief Gets additional properties for the SVG-XML-Element.
 	/// @returns XML-properties as a string.
 	/// 
 	/// This is used as a template method in ToSVG for SVG creation.
 	virtual std::string GetProperties() const = 0;
 
-private:
 	/// @ X-coordinate of position.
 	size_t const mX;
 	/// @ Y-coordinate of position.
 	size_t const mY;
 
 	/// @brief Color of the graphic object (e.g. black, green,...).
-	std::string mColor;
+	std::string const mColor;
 };
 
 #endif

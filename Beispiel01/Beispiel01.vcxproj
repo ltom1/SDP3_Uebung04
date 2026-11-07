@@ -102,15 +102,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FilledRectangle.cpp" />
+    <ClCompile Include="FramedRectangle.cpp" />
     <ClCompile Include="GraphicObject.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FilledRectangle.h" />
+    <ClInclude Include="FramedRectangle.h" />
     <ClInclude Include="GraphicObject.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="SingletonBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
