@@ -14,6 +14,9 @@
     <ClCompile Include="FramedRectangle.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Implementation">
@@ -46,6 +49,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FramedRectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
