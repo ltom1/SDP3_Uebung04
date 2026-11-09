@@ -110,6 +110,7 @@
     <ClCompile Include="FramedObjectFactory.cpp" />
     <ClCompile Include="FramedRectangle.cpp" />
     <ClCompile Include="GraphicObject.cpp" />
+    <ClCompile Include="Image.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
@@ -126,6 +127,8 @@
     <ClInclude Include="FramedRectangle.h" />
     <ClInclude Include="GraphicObject.h" />
     <ClInclude Include="GraphicObjectFactory.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="ImageManager.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="SingletonBase.h" />

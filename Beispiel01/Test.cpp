@@ -4,6 +4,10 @@
 
 #include "FramedRectangle.h"
 #include "FilledRectangle.h"
+#include "FramedCircle.h"
+#include "FilledCricle.h"
+#include "FramedObjectFactory.h"
+#include "FilledObjectFactory.h"
 
 /////////////////////////////////////////////////
 
@@ -32,3 +36,45 @@ TEST(FilledRectangle, Test) {
 }
 
 /////////////////////////////////////////////////
+
+TEST(FramedCircle, Test) {
+	FramedCircle const circ1{ 0, 0, "black", 10};
+	FramedCircle const circ2{ 100, 100,  "doesnotexist", 0};
+	EXPECT_EQ(circ1.ToSVG(), "<circle cx=\"0\" cy=\"0\" r=\"10\" stroke=\"black\" fill=\"none\"/>");
+	EXPECT_EQ(circ2.ToSVG(), "<circle cx=\"100\" cy=\"100\" r=\"0\" stroke=\"doesnotexist\" fill=\"none\"/>");
+
+	FramedCircle const circ3{ circ1 };
+
+	EXPECT_EQ(circ3.ToSVG(), circ1.ToSVG());
+}
+
+/////////////////////////////////////////////////
+
+TEST(FilledCircle, Test) {
+	FilledCircle const circ1{ 0, 0, "black", 10 };
+	FilledCircle const circ2{ 100, 100,  "doesnotexist", 0 };
+	EXPECT_EQ(circ1.ToSVG(), "<circle cx=\"0\" cy=\"0\" r=\"10\" stroke=\"black\" />");
+	EXPECT_EQ(circ2.ToSVG(), "<circle cx=\"100\" cy=\"100\" r=\"0\" stroke=\"doesnotexist\" />");
+
+	FilledCircle const circ3{ circ1 };
+
+	EXPECT_EQ(circ3.ToSVG(), circ1.ToSVG());
+}
+
+/////////////////////////////////////////////////
+
+TEST(FramedObjectFactory, Test) {
+	FramedObjectFactory& fact = FramedObjectFactory::GetInstance();
+
+	GraphicObject::UPtr circ1 = fact.CreateCircle(10, 10, "black", 3);
+	ASSERT_NE(circ1, nullptr);
+}
+
+/////////////////////////////////////////////////
+
+TEST(FilledObjectFactory, Test) {
+	FilledObjectFactory& fact = FilledObjectFactory::GetInstance();
+
+	GraphicObject::UPtr circ1 = fact.CreateCircle(10, 10, "black", 3);
+	ASSERT_NE(circ1, nullptr);
+}

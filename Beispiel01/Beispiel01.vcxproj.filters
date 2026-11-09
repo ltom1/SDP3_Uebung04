@@ -27,6 +27,7 @@
       <Filter>Implementation</Filter>
     </ClCompile>
     <ClCompile Include="FramedCircle.cpp">
+    <ClCompile Include="Image.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
   </ItemGroup>
@@ -79,6 +80,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FramedCircle.h">
+    <ClInclude Include="Image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
