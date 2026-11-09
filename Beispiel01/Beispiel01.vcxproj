@@ -102,7 +102,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="FilledCricle.cpp" />
+    <ClCompile Include="FilledObjectFactory.cpp" />
     <ClCompile Include="FilledRectangle.cpp" />
+    <ClCompile Include="FramedCircle.cpp" />
+    <ClCompile Include="FramedObjectFactory.cpp" />
     <ClCompile Include="FramedRectangle.cpp" />
     <ClCompile Include="GraphicObject.cpp" />
     <ClCompile Include="Rectangle.cpp" />
@@ -112,9 +117,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="FilledCricle.h" />
+    <ClInclude Include="FilledObjectFactory.h" />
     <ClInclude Include="FilledRectangle.h" />
+    <ClInclude Include="FramedCircle.h" />
+    <ClInclude Include="FramedObjectFactory.h" />
     <ClInclude Include="FramedRectangle.h" />
     <ClInclude Include="GraphicObject.h" />
+    <ClInclude Include="GraphicObjectFactory.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="SingletonBase.h" />

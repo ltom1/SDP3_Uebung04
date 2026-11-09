@@ -14,6 +14,21 @@
     <ClCompile Include="FramedRectangle.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
+    <ClCompile Include="FramedObjectFactory.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="FilledObjectFactory.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="FilledCricle.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="FramedCircle.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Implementation">
@@ -36,7 +51,7 @@
     <ClInclude Include="SingletonBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphicObject.h">
+    <ClInclude Include="GraphicObjectFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
@@ -46,6 +61,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FramedRectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FramedObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FilledObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FilledCricle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FramedCircle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
