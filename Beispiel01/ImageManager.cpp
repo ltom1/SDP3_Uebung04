@@ -6,14 +6,14 @@ static auto const cErrNoImg = "No image selected";
 
 void ImageManager::AddImage(std::string const& name, GraphicObjectFactory& factory)
 {
-	mImages.emplace_back(std::move(std::make_unique<Image>(name, factory)));
+	mImages.emplace_back(std::make_unique<Image>(name, factory));
 }
 
 void ImageManager::WriteAllSVG() const
 {
 	for (auto const& img : mImages)
 	{
-		img->WriteToSVG();
+		if (img != nullptr) img->WriteToSVG();
 	}
 }
 

@@ -27,12 +27,6 @@ public:
 		return *mInstance;
 	}
 
-	/// @brief Deletes the instance
-	static void Delete()
-	{
-		mInstance.reset();
-	}
-
 protected:
 
 	/// @brief CTor

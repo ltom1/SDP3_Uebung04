@@ -19,8 +19,7 @@ public:
 	/// @param[in] x The X-coordinate of position.
 	/// @param[in] y The Y-coordinate of position.
 	/// @param[in] color Color of the circle (e.g. black, green,...).
-	/// @param[in] width The width of the circle.
-	/// @param[in] height The height of the circle.
+	/// @param[in] radius The radius of the circle.
 	FramedCircle(size_t const x, size_t const y, std::string const& color, size_t const radius);
 
 protected:

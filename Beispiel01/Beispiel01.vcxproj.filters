@@ -5,7 +5,7 @@
     <ClCompile Include="Circle.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
-    <ClCompile Include="FilledCricle.cpp">
+    <ClCompile Include="FilledCircle.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
     <ClCompile Include="FilledObjectFactory.cpp">
@@ -40,7 +40,7 @@
     <ClInclude Include="Circle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FilledCricle.h">
+    <ClInclude Include="FilledCircle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FilledObjectFactory.h">
@@ -82,6 +82,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TestImage.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Img1.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Img2.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Img3.svg">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Implementation">

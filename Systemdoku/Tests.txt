@@ -1,0 +1,54 @@
+Visual Leak Detector read settings from: C:\Program Files (x86)\Visual Leak Detector\vld.ini
+Visual Leak Detector Version 2.5.1 installed.
+Running main() from D:\a\_work\1\s\googletest\googletest\src\gtest_main.cc
+[==========] Running 10 tests from 8 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from FramedRectangle
+[ RUN      ] FramedRectangle.Test
+[       OK ] FramedRectangle.Test (0 ms)
+[----------] 1 test from FramedRectangle (1 ms total)
+
+[----------] 1 test from FilledRectangle
+[ RUN      ] FilledRectangle.Test
+[       OK ] FilledRectangle.Test (0 ms)
+[----------] 1 test from FilledRectangle (1 ms total)
+
+[----------] 1 test from FramedCircle
+[ RUN      ] FramedCircle.Test
+[       OK ] FramedCircle.Test (0 ms)
+[----------] 1 test from FramedCircle (1 ms total)
+
+[----------] 1 test from FilledCircle
+[ RUN      ] FilledCircle.Test
+[       OK ] FilledCircle.Test (0 ms)
+[----------] 1 test from FilledCircle (1 ms total)
+
+[----------] 1 test from FramedObjectFactory
+[ RUN      ] FramedObjectFactory.Test
+[       OK ] FramedObjectFactory.Test (0 ms)
+[----------] 1 test from FramedObjectFactory (1 ms total)
+
+[----------] 1 test from FilledObjectFactory
+[ RUN      ] FilledObjectFactory.Test
+[       OK ] FilledObjectFactory.Test (1 ms)
+[----------] 1 test from FilledObjectFactory (1 ms total)
+
+[----------] 2 tests from Image
+[ RUN      ] Image.Test
+[       OK ] Image.Test (4 ms)
+[ RUN      ] Image.InvldName
+[       OK ] Image.InvldName (0 ms)
+[----------] 2 tests from Image (6 ms total)
+
+[----------] 2 tests from ImageManager
+[ RUN      ] ImageManager.Test
+[       OK ] ImageManager.Test (9 ms)
+[ RUN      ] ImageManager.InvldName
+[       OK ] ImageManager.InvldName (2 ms)
+[----------] 2 tests from ImageManager (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 8 test cases ran. (31 ms total)
+[  PASSED  ] 10 tests.
+No memory leaks detected.
+Visual Leak Detector is now exiting.

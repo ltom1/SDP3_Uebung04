@@ -2,12 +2,12 @@
 #include "FramedRectangle.h"
 #include "FramedCircle.h"
 
-std::unique_ptr<GraphicObject> FramedObjectFactory::CreateCircle(size_t x, size_t y, std::string color, size_t radius) const
+GraphicObject::UPtr FramedObjectFactory::CreateCircle(size_t const x, size_t const y, std::string const& color, size_t const radius) const
 {
-	return std::make_unique<FramedCircle>(FramedCircle::FramedCircle(x, y, color, radius));
+	return std::make_unique<FramedCircle>(x, y, color, radius);
 }
 
-std::unique_ptr<GraphicObject> FramedObjectFactory::CreateRectangle(size_t x, size_t y, std::string color, size_t width, size_t height) const
+GraphicObject::UPtr FramedObjectFactory::CreateRectangle(size_t const x, size_t const y, std::string const& color, size_t const width, size_t const height) const
 {
-	return std::make_unique<FramedRectangle>(FramedRectangle::FramedRectangle(x, y, color, width, height));
+	return std::make_unique<FramedRectangle>(x, y, color, width, height);
 }

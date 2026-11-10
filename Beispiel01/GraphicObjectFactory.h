@@ -20,7 +20,7 @@ public:
 	/// @param[in] y y-pos of the circle
 	/// @param[in] color color of the circle
 	/// @param[in] radius radius of the circle
-	virtual std::unique_ptr<GraphicObject> CreateCircle(size_t x, size_t y, std::string color, size_t radius) const = 0;
+	virtual GraphicObject::UPtr CreateCircle(size_t const x, size_t const y, std::string const& color, size_t const radius) const = 0;
 
 
 	/// @brief Creates a rectangle
@@ -29,7 +29,10 @@ public:
 	/// @param[in] color color of the rectangle
 	/// @param[in] width width of the rectangle
 	/// @param[in] height height of the rectangle
-	virtual std::unique_ptr<GraphicObject> CreateRectangle(size_t x, size_t y, std::string color, size_t width, size_t height) const = 0;
+	virtual GraphicObject::UPtr CreateRectangle(size_t const x, size_t const y, std::string const& color, size_t const width, size_t const height) const = 0;
+
+	/// @brief Virtual DTor.
+	virtual ~GraphicObjectFactory() = default;
 };
 
 #endif

@@ -91,8 +91,8 @@
 \subsection{Aufwand}
 
 \begin{itemize}
-	\item \docauthor: geschätzt 7 Ph / tatsächlich 0 Ph
-	\item \doccoauthor: geschätzt 7 Ph / tatsächlich 0 Ph
+	\item \docauthor: geschätzt 7 Ph / tatsächlich 6 Ph
+	\item \doccoauthor: geschätzt 7 Ph / tatsächlich 6 Ph
 \end{itemize}
 
 \section{Anforderungsdefinition (Systemspezifikation)}
@@ -134,8 +134,57 @@ In \textit{WriteSVG} generiert \textbf{Image} so die XML-SVG-Strings für jedes 
 Die HTML-Startdatei befindet sich im Verzeichnis \href{run:./../doxy/html/index.html}{./../doxy/html/index.html}
 
 \section{Testprotokollierung}
+Die Tests wurden mittels Google Test Suite direkt in Visual Studio durchgeführt.\\
+Die generierten SVG-Dateien befinden sich im Ordner \textbf{Beispiel01}. \textit{Img2.svg} ist leer.\\
+\begin{minipage}{0.4\textwidth}
+	\fig{Systemdoku/Images/TestImage.png}{1.0}{TestImage.svg}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+	\fig{Systemdoku/Images/Img3.png}{1.0}{Img3.svg}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+	\fig{Systemdoku/Images/Img1.png}{1.0}{Img1.svg}
+\end{minipage}
+\testoutput{Systemdoku/Tests}
 
 \section{Quellcode}
+
+\subsection{Object}
+\h{Beispiel01/Object}
+
+\subsection{SingletonBase}
+\h{Beispiel01/SingletonBase}
+
+\subsection{GraphicObject}
+\cppmodule{Beispiel01/GraphicObject}
+
+\subsubsection{Rectangles}
+\cppmodule{Beispiel01/Rectangle}
+\cppmodule{Beispiel01/FilledRectangle}
+\cppmodule{Beispiel01/FramedRectangle}
+
+\subsubsection{Circles}
+\cppmodule{Beispiel01/Circle}
+\cppmodule{Beispiel01/FilledCircle}
+\cppmodule{Beispiel01/FramedCircle}
+
+\subsection{GraphicObjectFactory}
+\h{Beispiel01/GraphicObjectFactory}
+
+\subsubsection{FilledObjectFactory}
+\cppmodule{Beispiel01/FilledObjectFactory}
+
+\subsubsection{FramedObjectFactory}
+\cppmodule{Beispiel01/FramedObjectFactory}
+
+\subsection{Image}
+\cppmodule{Beispiel01/Image}
+
+\subsection{ImageManager}
+\cppmodule{Beispiel01/ImageManager}
+
+\subsection{Testtreiber}
+\cpp{Beispiel01/Test}
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

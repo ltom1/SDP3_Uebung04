@@ -103,7 +103,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="FilledCricle.cpp" />
+    <ClCompile Include="FilledCircle.cpp" />
     <ClCompile Include="FilledObjectFactory.cpp" />
     <ClCompile Include="FilledRectangle.cpp" />
     <ClCompile Include="FramedCircle.cpp" />
@@ -116,11 +116,15 @@
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Img1.svg" />
+    <None Include="Img2.svg" />
+    <None Include="Img3.svg" />
     <None Include="packages.config" />
+    <None Include="TestImage.svg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
-    <ClInclude Include="FilledCricle.h" />
+    <ClInclude Include="FilledCircle.h" />
     <ClInclude Include="FilledObjectFactory.h" />
     <ClInclude Include="FilledRectangle.h" />
     <ClInclude Include="FramedCircle.h" />
