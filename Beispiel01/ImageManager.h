@@ -14,6 +14,7 @@
 /// Provides operations on Image objects.
 class ImageManager : public SingletonBase<ImageManager>
 {
+	friend class SingletonBase<ImageManager>;
 public:
 	/// @brief Add a new Image to the ImageManager.
 	/// @param[in] name The name of the image -> will be the filename.

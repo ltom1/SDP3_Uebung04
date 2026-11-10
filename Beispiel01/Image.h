@@ -3,6 +3,7 @@
 
 #include "Object.h"
 #include "GraphicObject.h"
+#include "GraphicObjectFactory.h"
 
 #include <string>
 #include <vector>

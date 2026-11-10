@@ -17,7 +17,7 @@ public:
 	/// @param[in] y y-pos of the circle
 	/// @param[in] color color of the circle
 	/// @param[in] radius radius of the circle
-	std::unique_ptr<GraphicObject> CreateCircle(size_t x, size_t y, std::string color, size_t radius);
+	std::unique_ptr<GraphicObject> CreateCircle(size_t x, size_t y, std::string color, size_t radius) const override;
 
 
 	/// @brief Creates a filled rectangle
@@ -26,7 +26,7 @@ public:
 	/// @param[in] color color of the rectangle
 	/// @param[in] width width of the rectangle
 	/// @param[in] height height of the rectangle
-	std::unique_ptr<GraphicObject> CreateRectangle(size_t x, size_t y, std::string color, size_t width, size_t height);
+	std::unique_ptr<GraphicObject> CreateRectangle(size_t x, size_t y, std::string color, size_t width, size_t height) const override;
 
 };
 

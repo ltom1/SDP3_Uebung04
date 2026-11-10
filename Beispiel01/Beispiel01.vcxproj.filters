@@ -1,64 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="test.cpp" />
-    <ClCompile Include="GraphicObject.cpp">
-      <Filter>Implementation</Filter>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>Implementation</Filter>
-    </ClCompile>
-    <ClCompile Include="FilledRectangle.cpp">
-      <Filter>Implementation</Filter>
-    </ClCompile>
-    <ClCompile Include="FramedRectangle.cpp">
-      <Filter>Implementation</Filter>
-    </ClCompile>
-    <ClCompile Include="FramedObjectFactory.cpp">
-      <Filter>Implementation</Filter>
-    </ClCompile>
-    <ClCompile Include="FilledObjectFactory.cpp">
-      <Filter>Implementation</Filter>
-    </ClCompile>
+    <ClCompile Include="Test.cpp" />
     <ClCompile Include="Circle.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
     <ClCompile Include="FilledCricle.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
+    <ClCompile Include="FilledObjectFactory.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="FilledRectangle.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
     <ClCompile Include="FramedCircle.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="FramedObjectFactory.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="FramedRectangle.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicObject.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
     <ClCompile Include="Image.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Implementation">
-      <UniqueIdentifier>{3a3f76ca-5247-4779-bcf2-065aa9dbbadd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{24f8d7e9-7bbd-40fe-9be2-96427bbd0065}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{3e6f22bd-cb4b-456c-8619-bb28d75811ac}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Object.h">
+    <ClInclude Include="Circle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SingletonBase.h">
+    <ClInclude Include="FilledCricle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphicObjectFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
+    <ClInclude Include="FilledObjectFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FilledRectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FramedCircle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FramedObjectFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FramedRectangle.h">
@@ -67,24 +61,37 @@
     <ClInclude Include="GraphicObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FramedObjectFactory.h">
+    <ClInclude Include="GraphicObjectFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FilledObjectFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Circle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FilledCricle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FramedCircle.h">
     <ClInclude Include="Image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ImageManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Implementation">
+      <UniqueIdentifier>{a6cead2d-8d4a-4893-a56d-fe52d612bae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{971aa154-99d4-489e-9b15-c91459d00ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c0522f25-53b3-443c-b2b1-d40941edc6ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

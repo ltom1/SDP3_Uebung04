@@ -111,6 +111,7 @@
     <ClCompile Include="FramedRectangle.cpp" />
     <ClCompile Include="GraphicObject.cpp" />
     <ClCompile Include="Image.cpp" />
+    <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
